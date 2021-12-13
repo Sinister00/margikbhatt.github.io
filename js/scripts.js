@@ -519,7 +519,16 @@ document.onkeydown = function(e) {
 	}      
 }
 
-window.addEventListener('contextmenu', function (e) { 
-  window.alert("Right Click is Disabled"); 
-  e.preventDefault(); 
-}, false);
+function DisableClick() {
+        document.onclick=function(event){
+          if (event.button == 2) {            
+            return false;
+          }
+	  if (event.button == 17) {
+	    return false;
+	  }
+	  if (event.button == 123) {
+	    return false;
+	  }
+        }
+      }
